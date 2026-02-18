@@ -117,7 +117,7 @@ Installed from website — Play Protect may show warning.
     <p>Advanced Android App Lock & Privacy Protection</p>
     <div class="version" id="versionText"></div>
 
-    <a class="download-btn" href="Sentinex_Secure_v1.0.1.apk" download onclick="increaseDownload()">
+    <a class="download-btn" href="app-release.apk" download onclick="increaseDownload()">
         Download APK
     </a>
 
@@ -175,8 +175,8 @@ After installation, you can turn Play Protect back ON.
 <div class="section">
     <div class="card">
         <h2>Submit Your Review</h2>
-        <form action="https://formsubmit.co/sentinex.official.app@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
+        <form onsubmit="event.preventDefault(); submitReview();">
+<input type="hidden" name="_captcha" value="false">
 
             <select name="Rating" required>
                 <option value="">Select Rating</option>
@@ -190,7 +190,7 @@ After installation, you can turn Play Protect back ON.
 
             <textarea name="Review" rows="5" required></textarea>
             <br><br>
-
+<div id="reviewsList"></div>
             <button type="submit">Submit Review</button>
         </form>
     </div>
@@ -280,19 +280,35 @@ document.getElementById("versionText").innerText =
     version + " | Updated " + year;
 
 // Download Counter (Browser Based)
-function increaseDownload() {
-    let count = localStorage.getItem("downloadCount");
-    count = count ? parseInt(count) + 1 : 1;
-    localStorage.setItem("downloadCount", count);
-    document.getElementById("downloadCount").innerText = count;
+async function increaseDownload() {
+    const counterRef = doc(db, "stats", "downloads");
+
+    const docSnap = await getDoc(counterRef);
+
+    if (docSnap.exists()) {
+        await updateDoc(counterRef, {
+            count: increment(1)
+        });
+    } else {
+        await setDoc(counterRef, { count: 1 });
+    }
+
+    loadDownloadCount();
+}
+
+async function loadDownloadCount() {
+    const counterRef = doc(db, "stats", "downloads");
+    const docSnap = await getDoc(counterRef);
+
+    if (docSnap.exists()) {
+        document.getElementById("downloadCount").innerText =
+            docSnap.data().count;
+    }
 }
 
 window.onload = function() {
-    let saved = localStorage.getItem("downloadCount");
-    if (saved) {
-        document.getElementById("downloadCount").innerText = saved;
-    }
-}
+    loadDownloadCount();
+};
 
 // FAQ Toggle
 function toggleFAQ(element) {
@@ -301,6 +317,66 @@ function toggleFAQ(element) {
         answer.style.display === "block" ? "none" : "block";
 }
 </script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } 
+from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
+import { collection, addDoc, getDocs } 
+from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js";
+async function submitReview() {
+    const rating = document.querySelector("select").value;
+    const reviewText = document.querySelector("textarea").value;
 
+    if (!rating || !reviewText) return;
+
+    await addDoc(collection(db, "reviews"), {
+        rating: rating,
+        review: reviewText,
+        date: new Date()
+    });
+
+    alert("Review submitted!");
+    loadReviews();
+}
+ // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA3uVD1_BcihyecQ2QtvGZvJ_3QdhJxlQI",
+    authDomain: "sentinex-88137.firebaseapp.com",
+    projectId: "sentinex-88137",
+    storageBucket: "sentinex-88137.firebasestorage.app",
+    messagingSenderId: "267057582310",
+    appId: "1:267057582310:web:c94a2b4e1fa666de1eeb27",
+    measurementId: "G-9F323P4F53"
+  };
+async function loadReviews() {
+    const querySnapshot = await getDocs(collection(db, "reviews"));
+    const container = document.getElementById("reviewsList");
+    container.innerHTML = "";
+
+    querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        container.innerHTML += `
+            <div style="margin-top:15px; background:#0f172a; padding:15px; border-radius:8px;">
+                <b>${data.rating}</b>
+                <p>${data.review}</p>
+            </div>
+        `;
+    });
+}
+
+window.onload = function() {
+    loadDownloadCount();
+    loadReviews();
+};
+  // Initialize Firebase
+const db = getFirestore(app);
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
