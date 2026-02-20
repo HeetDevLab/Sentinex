@@ -146,3 +146,19 @@ font-size:20px;
 .arrow.rotate{
 transform:rotate(180deg);
 }
+/* Download Button Pulse Glow */
+@keyframes pulseGlow{
+0%{
+box-shadow:0 0 15px rgba(11,92,255,0.5);
+}
+50%{
+box-shadow:0 0 30px rgba(11,92,255,1);
+}
+100%{
+box-shadow:0 0 15px rgba(11,92,255,0.5);
+}
+}
+
+.download-btn.pulse{
+animation:pulseGlow 2.5s infinite;
+}
