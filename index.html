@@ -375,6 +375,65 @@ box.style.display === "block" ? "none" : "block";
 }
 
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+  const overlay = document.getElementById("navOverlay");
+  const links = navLinks.querySelectorAll("a");
+
+  hamburger.addEventListener("click", function(){
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("nav-open");
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  links.forEach(link=>{
+    link.addEventListener("click", closeMenu);
+  });
+
+  function closeMenu(){
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("nav-open");
+  }
+
+});
+particlesJS("particles-bg",{
+"particles":{
+"number":{"value":60},
+"color":{"value":"#ffffff"},
+"shape":{"type":"circle"},
+"opacity":{"value":0.4},
+"size":{"value":2},
+"line_linked":{
+"enable":true,
+"distance":140,
+"color":"#ffffff",
+"opacity":0.3,
+"width":1
+},
+"move":{
+"enable":true,
+"speed":1
+}
+},
+"interactivity":{
+"events":{
+"onhover":{"enable":true,"mode":"grab"}
+}
+}
+});
+</script>
+</body>
+
+</html>
+
+    
 </body>
 </html>
