@@ -364,16 +364,26 @@ answer.style.display === "block" ? "none" : "block";
 
 }
 
-
 function toggleInstallGuide(){
+let box=document.getElementById("installGuide");
+let arrow=document.getElementById("arrow");
 
-let box = document.getElementById("installGuide");
-
-box.style.display =
-box.style.display === "block" ? "none" : "block";
-
+if(box.style.display==="block"){
+box.style.display="none";
+arrow.classList.remove("rotate");
+}else{
+box.style.display="block";
+arrow.classList.add("rotate");
 }
+}
+// Add Pulse Glow on Load
+window.addEventListener("load", function(){
 
+const btn = document.querySelector(".download-btn");
+
+if(btn){
+btn.classList.add("pulse");
+}
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function(){
