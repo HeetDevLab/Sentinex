@@ -355,13 +355,12 @@ document.getElementById("downloadCount").innerText = saved;
 }
 
 
-function toggleFAQ(element){
 
-let answer = element.nextElementSibling;
-
-answer.style.display =
-answer.style.display === "block" ? "none" : "block";
-
+// FAQ Toggle
+function toggleFAQ(element) {
+    let answer = element.nextElementSibling;
+    answer.style.display =
+        answer.style.display === "block" ? "none" : "block";
 }
 
 function toggleInstallGuide(){
