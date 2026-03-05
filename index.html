@@ -328,33 +328,20 @@ Read full privacy policy
 
 
 <script>
-
-function increaseDownload(){
-
-let count = localStorage.getItem("downloadCount");
-
-count = count ? parseInt(count) + 1 : 1;
-
-localStorage.setItem("downloadCount", count);
-
-document.getElementById("downloadCount").innerText = count;
-
+// Download Counter (Browser Based)
+function increaseDownload() {
+    let count = localStorage.getItem("downloadCount");
+    count = count ? parseInt(count) + 1 : 1;
+    localStorage.setItem("downloadCount", count);
+    document.getElementById("downloadCount").innerText = count;
 }
 
-
-window.onload = function(){
-
-let saved = localStorage.getItem("downloadCount");
-
-if(saved){
-
-document.getElementById("downloadCount").innerText = saved;
-
+window.onload = function() {
+    let saved = localStorage.getItem("downloadCount");
+    if (saved) {
+        document.getElementById("downloadCount").innerText = saved;
+    }
 }
-
-}
-
-
 
 // FAQ Toggle
 function toggleFAQ(element) {
@@ -362,7 +349,6 @@ function toggleFAQ(element) {
     answer.style.display =
         answer.style.display === "block" ? "none" : "block";
 }
-
 function toggleInstallGuide(){
 let box=document.getElementById("installGuide");
 let arrow=document.getElementById("arrow");
@@ -375,6 +361,7 @@ box.style.display="block";
 arrow.classList.add("rotate");
 }
 }
+
 // Add Pulse Glow on Load
 window.addEventListener("load", function(){
 
@@ -383,6 +370,8 @@ const btn = document.querySelector(".download-btn");
 if(btn){
 btn.classList.add("pulse");
 }
+
+});
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function(){
