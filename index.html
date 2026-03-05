@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Sentinex",
+  "name": "Sentinex Secure",
   "operatingSystem": "Android",
   "applicationCategory": "SecurityApplication",
   "creator": {
@@ -13,50 +14,63 @@
     "name": "HeetDevLab"
   },
   "url": "https://heetdevlab.github.io/Sentinex/",
-  "description": "Sentinex is a lightweight Android app lock designed to protect apps with strong privacy and security."
+  "description": "Sentinex Secure is a lightweight Android app lock that protects your apps using PIN security, Usage Access detection and overlay protection."
 }
 </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sentinex - Smart App Lock & Privacy Security App</title>
-  <meta name="description" content="Sentinex is a lightweight and smooth Android app lock designed to protect your apps with strong privacy security and seamless performance.">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Sentinex - Smart App Lock">
-  <meta property="og:description" content="Secure your apps with Sentinex. Lightweight, smooth and powerful privacy protection.">
-  <meta property="og:image" content="https://heetdevlab.github.io/Sentinex/preview.png">
-  <meta property="og:url" content="https://heetdevlab.github.io/Sentinex/">
-  <meta property="og:type" content="website">
-<link rel = "stylesheet" href="style.css"></link>
-<link rel="icon" type="image/png" sizes="32x32" href="https://heetdevlab.github.io/Sentinex/sentinex-favicon.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sentinex Secure – Lightweight Android App Lock</title>
+
+<meta name="description" content="Sentinex Secure protects your apps using PIN security, Usage Access detection and overlay protection. Lightweight, offline and privacy focused.">
+
+<meta property="og:title" content="Sentinex Secure – Android App Lock">
+<meta property="og:description" content="Protect your apps with Sentinex Secure. Lightweight, offline and privacy focused.">
+<meta property="og:image" content="https://heetdevlab.github.io/Sentinex/preview.png">
+<meta property="og:url" content="https://heetdevlab.github.io/Sentinex/">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" type="image/png" sizes="32x32"
+href="https://heetdevlab.github.io/Sentinex/sentinex-favicon.png">
+
 </head>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <div id="particles-bg"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<div id="particles-bg"></div>
+
 <body>
 
 <nav class="navbar">
- <div class="nav-overlay" id="navOverlay"></div>
-  <div class="nav-container">
 
-    <div class="nav-brand">
-      <a href="/">HeetDevLab</a>
-    </div>
+<div class="nav-container">
 
-   <div class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-   </div>
-    <div class="nav-links" id="navLinks">
-    <a href="https://heetdevlab.github.io">Home</a>
+<div class="nav-brand">
+<a href="/">HeetDevLab</a>
+</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="https://heetdevlab.github.io">Home</a>
+
 <a href="https://heetdevlab.github.io/Sentinex/">Sentinex</a>
+
 <a href="https://heetdevlab.github.io/Blog/">Blog</a>
+
 <a href="https://heetdevlab.github.io/Webtools/">
-  WebTools <span style="color:#00ff88;font-size:10px;">NEW</span>
+WebTools <span style="color:#00ff88;font-size:10px;">NEW</span>
 </a>
-<a href="https://youtube.com/@heetplayscode" target="_blank">YouTube</a>
-    </div>
-<div class="nav-overlay" id="navOverlay"></div>
-  </div>
+
+<a href="https://youtube.com/@heetplayscode" target="_blank">
+YouTube
+</a>
+
+</div>
+
+</div>
 </nav>
 
 
@@ -64,38 +78,39 @@
 
 <div class="logo">SENTINEX 🔒</div>
 
-</header>
 <h1 class="logo">Sentinex Secure</h1>
 
 <p style="color:#0b5cff;font-weight:bold;margin-top:6px;">
 Smart Protection Without Tracking
 </p>
 
-<!-- DOWNLOAD BUTTON MOVE HERE -->
 <div style="margin-top:18px;text-align:center;">
-<a class="download-btn" href="Sentinex_Secure_v1.0.1.apk">Download APK</a>
-<div class="counter">
 
-    <p style="margin-top:6px;color:#94a3b8;">
-    Downloads: <span id="downloadCount">0</span>
-    </p>
+<a class="download-btn"
+href="Sentinex_Secure_v1.0.1.apk"
+onclick="increaseDownload()">
 
-</div>
-<p style="color:#94a3b8;font-size:13px;margin-top:6px;">
-No signup • Works Offline • Safe Accessibility Usage
+Download APK
+
+</a>
+
+<p style="margin-top:6px;color:#94a3b8;">
+Downloads: <span id="downloadCount">0</span>
 </p>
 
+<p style="color:#94a3b8;font-size:13px;margin-top:6px;">
+No signup • Works Offline • No Data Collection
+</p>
 
 </div>
+
 <p class="sub-info">
 Advanced Android App Lock & Privacy Protection
 </p>
-<div class="version" id="versionText"></div>
 
 <p style="color:#0b5cff;font-weight:bold;">
 ✔ Indie Built • ✔ Privacy Focused • ✔ Offline First
 </p>
-
 
 <div class="card" style="max-width:750px;text-align:left;margin-top:30px;">
 
@@ -110,7 +125,8 @@ This is completely normal for independent apps and
 <b style="color:white;">does NOT mean the app is unsafe.</b>
 
 </p>
-<div onclick="toggleInstallGuide()" 
+
+<div onclick="toggleInstallGuide()"
 style="cursor:pointer;
 padding:16px;
 font-weight:bold;
@@ -119,257 +135,246 @@ border-radius:12px;
 background:rgba(11,92,255,0.15);
 color:#0b5cff;
 text-align:center;">
-<span id="arrow" class="arrow">⌵</span> Install Guide — Safe & Trusted
+
+<span id="arrow">⌵</span>
+Install Guide — Safe & Trusted
+
 </div>
 
-<div id="installGuide" style="display:none;padding:18px 6px;color:#cbd5e1;line-height:1.6;">
+<div id="installGuide"
+style="display:none;padding:18px 6px;color:#cbd5e1;line-height:1.6;">
+
+<b>✔ Quick Install</b><br>
+
+• Tap Install<br>
+
+• Open the app<br>
+
+• Allow <b>Usage Access</b><br>
+
+• Allow <b>Display Over Other Apps</b><br><br>
 
 <p style="color:#94a3b8;">
-Installed from website — Play Protect may show a warning because the app is not from Play Store.
-This is normal and does <b>NOT</b> mean the app is unsafe.
-</p>
-
-<br>
-
-<b style="color:white;">✔ Quick Install</b><br>
-• Tap <b>More details</b><br>
-• Select <b>Install anyway</b><br>
-• Enable Accessibility after opening<br><br>
-
-<b style="color:white;">✔ If Install Button Missing</b><br>
-• Play Store → Profile → Play Protect<br>
-• Turn OFF Scan apps temporarily<br>
-• Install again and turn it back ON<br><br>
-
-<b style="color:white;">✔ Allow From Browser</b><br>
-• Settings → Security → Install unknown apps<br>
-• Enable Allow from this source<br><br>
-
-<p style="color:#94a3b8;">
-🔒 Works offline • No data collected • Safe accessibility usage
+Works offline • No data collected • Safe permissions
 </p>
 
 </div>
 
 </div>
-
 
 </header>
+
+
 <div class="section">
-    <div class="card">
-        <h2>Key Features</h2>
-        <p>✔ Secure PIN Protection</p>
-        <p>✔ Accessibility Based App Lock</p>
-        <p>✔ Wrong Attempt Logging</p>
-        <p>✔ Smart Lock Reset</p>
-        <p>✔ Fully Offline – No Data Collection</p>
-    </div>
+
+<div class="card">
+
+<h2>Key Features</h2>
+
+<p>✔ Secure PIN Protection</p>
+
+<p>✔ App Usage Based App Lock</p>
+
+<p>✔ Display Over Other Apps Protection</p>
+
+<p>✔ Wrong Attempt Logging</p>
+
+<p>✔ Smart Lock Reset</p>
+
+<p>✔ Fully Offline – No Data Collection</p>
+
 </div>
 
-<div class="section">
-    <div class="card">
-        <h2>Submit Your Review</h2>
-        <form action="https://formsubmit.co/sentinex.official.app@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-
-            <select name="Rating" required>
-                <option bgcolor ="black" value="">Select Rating</option>
-                <option>⭐⭐⭐⭐⭐ - Excellent</option>
-                <option>⭐⭐⭐⭐ - Very Good</option>
-                <option>⭐⭐⭐ - Good</option>
-                <option>⭐⭐ - Average</option>
-                <option>⭐ - Poor</option>
-            </select>
-            <br><br>
-
-            <textarea name="Review" rows="5" required></textarea>
-            <br><br>
-
-            <button type="submit">Submit Review</button>
-        </form>
-    </div>
 </div>
 
+
 <div class="section">
-    <div class="card">
-        <h2>FAQ</h2>
+
+<div class="card">
+
+<h2>Submit Your Review</h2>
+
+<form action="https://formsubmit.co/sentinex.official.app@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+
+<select name="Rating" required>
+
+<option value="">Select Rating</option>
+
+<option>⭐⭐⭐⭐⭐ - Excellent</option>
+
+<option>⭐⭐⭐⭐ - Very Good</option>
+
+<option>⭐⭐⭐ - Good</option>
+
+<option>⭐⭐ - Average</option>
+
+<option>⭐ - Poor</option>
+
+</select>
+
+<br><br>
+
+<textarea name="Review" rows="5" required></textarea>
+
+<br><br>
+
+<button type="submit">Submit Review</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<div class="section">
+
+<div class="card">
+
+<h2>FAQ</h2>
+
 <div class="faq-item">
-    <div class="faq-question" onclick="toggleFAQ(this)">
-        How to install if Play Protect blocks it?
-    </div>
-    <div class="faq-answer">
-        When installing from website:
-        <br><br>
-        • Tap "More details"<br>
-        • Tap "Install anyway"<br>
-        • Open app and enable Accessibility
-        <br><br>
-        This happens because the app is not from Play Store.
-    </div>
+
+<div class="faq-question" onclick="toggleFAQ(this)">
+Why does Play Protect show warning?
 </div>
+
+<div class="faq-answer">
+
+Because the app is installed directly from the website
+instead of Google Play Store.
+
+</div>
+
+</div>
+
+
 <div class="faq-item">
-    <div class="faq-question" onclick="toggleFAQ(this)">
-        Why does Play Protect block the app?
-    </div>
-    <div class="faq-answer">
-        Sentinex Secure uses Android Accessibility Service for app lock functionality.
-        Apps using accessibility may trigger security warnings when installed outside Play Store.
-        The app does not collect personal data and works fully offline.
-    </div>
+
+<div class="faq-question" onclick="toggleFAQ(this)">
+Does Sentinex collect data?
 </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                Does Sentinex collect data?
-            </div>
-            <div class="faq-answer">
-                No. Sentinex works completely offline and does not collect personal data.
-            </div>
-        </div>
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                Why does Play Protect show warning?
-            </div>
-            <div class="faq-answer">
-                Because the app is installed from website and uses Accessibility for security features.
-            </div>
-        </div>
+<div class="faq-answer">
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-                Is Sentinex safe?
-            </div>
-            <div class="faq-answer">
-                Yes. No hidden tracking, no background spying, fully offline.
-            </div>
-        </div>
+No. Sentinex works completely offline and does not collect
+any personal data.
 
-    </div>
 </div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question" onclick="toggleFAQ(this)">
+What permissions does Sentinex require?
+</div>
+
+<div class="faq-answer">
+
+Sentinex requires Usage Access to detect opened apps
+and Display Over Other Apps permission to show the lock screen.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 
 <div class="section">
-    <div class="card">
-        <h2>Privacy Policy</h2>
-        <p>Read full privacy policy <a href="privacy.html" style="color:#22c55e;">here</a>.</p>
-    </div>
+
+<div class="card">
+
+<h2>Privacy Policy</h2>
+
+<p>
+Read full privacy policy
+<a href="privacy.html" style="color:#22c55e;">here</a>
+</p>
+
 </div>
 
-<div class="section">
-    <div class="card">
-        <h3 style="color:#0b5cff;">👨‍💻 Developer</h3>        
-        <p><b>Developed by Heet Shah</b></p>
-        <p>Contact: sentinex.official.app@gmail.com</p>
-        <p>Personal Contact: heets85520@gmail.com</p>
-    </div>
 </div>
+
+
+<div class="section">
+
+<div class="card">
+
+<h3 style="color:#0b5cff;">Developer</h3>
+
+<p><b>Developed by Heet Shah</b></p>
+
+<p>Contact: sentinex.official.app@gmail.com</p>
+
+<p>Personal Contact: heets85520@gmail.com</p>
+
+</div>
+
+</div>
+
 
 <footer>
-   © 2026 Sentinex • Powered by HeetDevLab
+
+© 2026 Sentinex • Powered by HeetDevLab
+
 </footer>
 
+
 <script>
-// Download Counter (Browser Based)
-function increaseDownload() {
-    let count = localStorage.getItem("downloadCount");
-    count = count ? parseInt(count) + 1 : 1;
-    localStorage.setItem("downloadCount", count);
-    document.getElementById("downloadCount").innerText = count;
+
+function increaseDownload(){
+
+let count = localStorage.getItem("downloadCount");
+
+count = count ? parseInt(count) + 1 : 1;
+
+localStorage.setItem("downloadCount", count);
+
+document.getElementById("downloadCount").innerText = count;
+
 }
 
-window.onload = function() {
-    let saved = localStorage.getItem("downloadCount");
-    if (saved) {
-        document.getElementById("downloadCount").innerText = saved;
-    }
+
+window.onload = function(){
+
+let saved = localStorage.getItem("downloadCount");
+
+if(saved){
+
+document.getElementById("downloadCount").innerText = saved;
+
 }
 
-// FAQ Toggle
-function toggleFAQ(element) {
-    let answer = element.nextElementSibling;
-    answer.style.display =
-        answer.style.display === "block" ? "none" : "block";
 }
+
+
+function toggleFAQ(element){
+
+let answer = element.nextElementSibling;
+
+answer.style.display =
+answer.style.display === "block" ? "none" : "block";
+
+}
+
+
 function toggleInstallGuide(){
-let box=document.getElementById("installGuide");
-let arrow=document.getElementById("arrow");
 
-if(box.style.display==="block"){
-box.style.display="none";
-arrow.classList.remove("rotate");
-}else{
-box.style.display="block";
-arrow.classList.add("rotate");
-}
-}
-// Add Pulse Glow on Load
-window.addEventListener("load", function(){
+let box = document.getElementById("installGuide");
 
-const btn = document.querySelector(".download-btn");
+box.style.display =
+box.style.display === "block" ? "none" : "block";
 
-if(btn){
-btn.classList.add("pulse");
 }
 
-});
 </script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
-  const overlay = document.getElementById("navOverlay");
-  const links = navLinks.querySelectorAll("a");
-
-  hamburger.addEventListener("click", function(){
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("nav-open");
-  });
-
-  overlay.addEventListener("click", closeMenu);
-
-  links.forEach(link=>{
-    link.addEventListener("click", closeMenu);
-  });
-
-  function closeMenu(){
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("active");
-    overlay.classList.remove("active");
-    document.body.classList.remove("nav-open");
-  }
-
-});
-particlesJS("particles-bg",{
-"particles":{
-"number":{"value":60},
-"color":{"value":"#ffffff"},
-"shape":{"type":"circle"},
-"opacity":{"value":0.4},
-"size":{"value":2},
-"line_linked":{
-"enable":true,
-"distance":140,
-"color":"#ffffff",
-"opacity":0.3,
-"width":1
-},
-"move":{
-"enable":true,
-"speed":1
-}
-},
-"interactivity":{
-"events":{
-"onhover":{"enable":true,"mode":"grab"}
-}
-}
-});
-</script>
 </body>
-
 </html>
-
