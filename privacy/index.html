@@ -2,63 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sentinex Privacy Policy</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
         content="Privacy Policy for Sentinex Secure - App Lock, Intruder Selfie and Security Logs."
     >
 
+    <meta name="robots" content="index, follow">
+
+    <title>Sentinex Secure - Privacy Policy</title>
+
     <style>
         * {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
-            padding: 24px 16px;
+            padding: 20px 14px;
             font-family: Arial, Helvetica, sans-serif;
             background: #0f172a;
             color: #ffffff;
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         .container {
             width: 100%;
             max-width: 900px;
             margin: 0 auto;
-            padding: 28px;
+            padding: 30px;
             background: #111c31;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
+            border-radius: 16px;
         }
 
         h1 {
-            margin-top: 0;
-            margin-bottom: 8px;
+            margin: 0;
             text-align: center;
             color: #4A90E2;
             font-size: 32px;
         }
 
-        .effective-date {
+        .subtitle {
+            margin-top: 8px;
             text-align: center;
             color: #aeb9ca;
-            margin-bottom: 28px;
+            font-size: 14px;
         }
 
         h2 {
-            margin-top: 30px;
+            margin-top: 32px;
             margin-bottom: 10px;
             color: #4A90E2;
             font-size: 21px;
         }
 
         p {
-            color: #d0d7e2;
             margin: 10px 0;
+            color: #d0d7e2;
+            font-size: 15px;
         }
 
         ul {
@@ -68,6 +79,7 @@
 
         li {
             margin-bottom: 10px;
+            font-size: 15px;
         }
 
         strong {
@@ -80,15 +92,35 @@
             word-break: break-word;
         }
 
+        .notice {
+            margin-top: 22px;
+            padding: 15px 16px;
+            background: rgba(74, 144, 226, 0.08);
+            border-left: 4px solid #4A90E2;
+            border-radius: 8px;
+        }
+
+        .notice p {
+            margin: 0;
+        }
+
+        a {
+            color: #60a5fa;
+        }
+
+        a:hover {
+            color: #93c5fd;
+        }
+
         hr {
             border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin: 32px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.10);
+            margin: 34px 0 20px;
         }
 
         .website {
             text-align: center;
-            margin-top: 32px;
+            margin-top: 34px;
         }
 
         .website a {
@@ -98,7 +130,7 @@
             color: #ffffff;
             text-decoration: none;
             border-radius: 24px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
         }
 
@@ -119,13 +151,14 @@
         }
 
         @media (max-width: 600px) {
+
             body {
-                padding: 12px;
+                padding: 10px;
             }
 
             .container {
                 padding: 20px 16px;
-                border-radius: 10px;
+                border-radius: 12px;
             }
 
             h1 {
@@ -138,7 +171,7 @@
 
             p,
             li {
-                font-size: 15px;
+                font-size: 14px;
             }
 
             .website a {
@@ -155,144 +188,152 @@
 
     <h1>Privacy Policy</h1>
 
-    <p class="effective-date">
+    <p class="subtitle">
+        Sentinex Secure
+    </p>
+
+    <p class="subtitle">
         Effective Date: 17 August 2026
     </p>
 
-    <p>
-        <strong>Sentinex</strong> ("we", "our", or "us") is committed
-        to protecting your privacy. This Privacy Policy explains how
-        our app operates and how user data is handled.
-    </p>
 
-
-    <h2>1. Information We Collect</h2>
+    <!-- INTRODUCTION -->
 
     <p>
-        Sentinex itself does <strong>not directly collect, store,
-        or share personal information</strong> such as your name,
-        email address, contacts, or location.
+        This Privacy Policy applies to the
+        <strong>Sentinex Secure</strong> mobile application
+        (the "Application"), operated by
+        <strong>HeetDevLab</strong> ("we", "our", or "us").
     </p>
 
     <p>
-        Data used by the app, such as locked apps, intruder photos,
-        and security logs, is stored <strong>locally on your device</strong>
-        and is not uploaded by Sentinex to its own external servers.
+        This Privacy Policy explains what information is handled
+        when you use Sentinex, why the Application requires certain
+        permissions, how information is stored, and how third-party
+        services used by the Application may process information.
     </p>
 
+
+    <!-- 1 -->
+
+    <h2>1. Information Sentinex Handles</h2>
+
+    <p>
+        Sentinex itself does not directly collect or upload
+        personal information such as your name, contacts, precise
+        location, or personal messages to servers operated by
+        HeetDevLab.
+    </p>
+
+    <p>
+        Information and data used by Sentinex for its security
+        features may include the applications you choose to
+        protect, security logs, and intruder photos generated by
+        the intruder protection feature.
+    </p>
+
+    <p>
+        This application data is intended to remain stored locally
+        on your device and is not uploaded by Sentinex to its own
+        servers.
+    </p>
+
+
+    <!-- 2 -->
 
     <h2>2. Permissions We Use</h2>
 
     <p>
-        Sentinex requires certain permissions to provide its
-        core functionality:
+        Sentinex requires certain Android permissions to provide
+        its security and app-lock functionality. These permissions
+        are used for the purposes described below.
     </p>
 
     <ul>
+
         <li>
             <strong>Biometric Permission:</strong>
-            Used to allow fingerprint or other supported biometric
-            authentication for unlocking protected apps.
+            Used to allow supported biometric authentication,
+            such as fingerprint authentication, for unlocking
+            protected applications.
         </li>
 
         <li>
             <strong>Notification Permission:</strong>
-            Used to display important security alerts and protection
-            status.
+            Used to display relevant security notifications and
+            protection status.
         </li>
 
         <li>
             <strong>Usage Access Permission:</strong>
-            Used to detect which application is currently running
-            in order to apply app-lock protection.
+            Used to determine which application is currently
+            active so Sentinex can apply app-lock protection to
+            applications selected by the user.
         </li>
 
         <li>
             <strong>Camera Permission:</strong>
-            Used to capture intruder photos when incorrect PIN
-            attempts trigger the intruder protection feature.
+            Used by the optional intruder protection feature to
+            capture photos after configured failed unlock attempts.
         </li>
 
         <li>
             <strong>Media/Storage Permission:</strong>
-            Used to save and access intruder photos locally on
-            your device. Sentinex does not upload these photos
-            to its own servers.
+            Where required by the Android version, used to save
+            or access intruder photos and related media locally
+            on the device.
         </li>
 
         <li>
-            <strong>Overlay Permission:</strong>
-            Used to display the app-lock screen when a protected
-            application is opened.
+            <strong>Display Over Other Apps Permission:</strong>
+            Used to display the Sentinex lock screen above a
+            protected application when that application is opened.
         </li>
 
         <li>
             <strong>Foreground Service:</strong>
-            Used to maintain app-lock protection while the
-            protection service is active.
+            Used while Sentinex protection is active to help
+            maintain app-lock functionality in the background.
         </li>
 
         <li>
             <strong>Boot Permission:</strong>
-            Used to restart protection after the device is restarted.
+            Used to restore protection-related functionality
+            after the device is restarted.
         </li>
+
     </ul>
 
     <p>
-        These permissions are used for app functionality and are
-        not used by Sentinex itself to collect personal information.
+        These permissions are used to provide the corresponding
+        Application features and are not intentionally used by
+        Sentinex itself for unrelated personal-data collection.
     </p>
 
-    <p>
-        Permissions are requested only when required for the
-        corresponding feature.
-    </p>
 
+    <!-- 3 -->
 
     <h2>3. Data Storage</h2>
 
     <p>
-        Data generated by Sentinex, including intruder photos and
-        security logs, is stored locally on your device.
-        Sentinex does not upload or back up this data to its own
-        cloud or remote servers.
-    </p>
-
-
-    <h2>4. Data Sharing</h2>
-
-    <p>
-        Sentinex does <strong>not sell, trade, or share your
-        personal app data</strong> with third parties.
+        Sentinex stores application security data locally on the
+        user's device where applicable.
     </p>
 
     <p>
-        Third-party services used by the app, such as Google AdMob,
-        may process information according to their own privacy
-        policies and terms.
+        This may include protected-app selections, security logs,
+        application settings, and intruder photos.
     </p>
-
-
-    <h2>5. Security</h2>
 
     <p>
-        We are committed to helping keep your information secure.
-        App data generated by Sentinex is stored locally on your
-        device, giving you control over that data.
+        Sentinex does not operate its own cloud service for backing
+        up or storing these security records.
     </p>
 
 
-    <h2>6. Children's Privacy</h2>
+    <!-- 4 -->
 
-    <p>
-        Sentinex is intended for general users. If you are under
-        the age required in your region to use apps independently,
-        please use the app with the supervision of a parent or
-        guardian.
-    </p>
-
-
-    <h2>7. Advertising</h2>
+    <h2>4. Advertising and Google AdMob</h2>
 
     <p>
         Sentinex uses <strong>Google AdMob</strong> to display
@@ -300,32 +341,133 @@
     </p>
 
     <p>
-        AdMob may collect and process certain information, such as
-        device information, advertising identifiers, IP address,
-        and usage data, to provide, measure, and improve advertising
-        services, subject to Google's policies.
+        Google AdMob and its related services may collect or process
+        certain information, which may include device information,
+        IP address, advertising identifiers, and usage information,
+        depending on the applicable configuration, consent
+        requirements, and Google's policies.
     </p>
 
     <p>
-        For more information about how Google processes data,
-        please refer to Google's Privacy Policy.
+        This processing is performed by Google as a third-party
+        advertising service and is subject to Google's applicable
+        terms and privacy policies.
+    </p>
+
+    <p>
+        For more information about Google's handling of information,
+        please review:
+    </p>
+
+    <p>
+        <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Google Privacy Policy
+        </a>
     </p>
 
 
-    <h2>8. Changes to This Policy</h2>
+    <!-- 5 -->
+
+    <h2>5. Third-Party Services</h2>
 
     <p>
-        We may update this Privacy Policy from time to time.
-        Any changes will be reflected on this page.
-        We encourage users to review this policy periodically.
+        The Application may use third-party services to provide
+        specific functionality, including advertising services.
+        Third-party services may process information according to
+        their own privacy policies.
+    </p>
+
+    <p>
+        The primary third-party service currently used by Sentinex
+        for advertising is:
+    </p>
+
+    <ul>
+        <li>
+            <strong>Google AdMob</strong> — advertising services
+        </li>
+    </ul>
+
+    <p>
+        We recommend reviewing the applicable third-party privacy
+        policies for more information about their data practices.
     </p>
 
 
-    <h2>9. Contact Us</h2>
+    <!-- 6 -->
+
+    <h2>6. Data Sharing</h2>
 
     <p>
-        If you have any questions or concerns regarding this
-        Privacy Policy, you can contact us at:
+        HeetDevLab does not sell or rent your Sentinex security
+        records, intruder photos, protected-app selections, or
+        security logs.
+    </p>
+
+    <p>
+        Sentinex does not upload these security records to its own
+        servers.
+    </p>
+
+    <p>
+        Third-party services, such as Google AdMob, may process
+        information required for their services as described in
+        their applicable privacy policies.
+    </p>
+
+    <p>
+        Information may also be disclosed where required by law,
+        legal process, or where necessary to protect the rights,
+        safety, or security of users or others.
+    </p>
+
+
+    <!-- 7 -->
+
+    <h2>7. Data Retention</h2>
+
+    <p>
+        Sentinex security data stored locally on your device remains
+        there according to your device settings and your use of
+        the Application.
+    </p>
+
+    <p>
+        Sentinex does not maintain a separate server-side retention
+        period for your local security logs or intruder photos
+        because these records are not uploaded to Sentinex servers.
+    </p>
+
+    <p>
+        Third-party services may retain information according to
+        their own policies and applicable legal requirements.
+    </p>
+
+
+    <!-- 8 -->
+
+    <h2>8. Your Privacy Rights</h2>
+
+    <p>
+        Depending on where you live, applicable privacy laws may
+        provide rights such as access to, correction of, deletion
+        of, or restriction of certain personal information.
+    </p>
+
+    <p>
+        Because Sentinex does not maintain a server-side database
+        of your app-lock security records, many locally stored
+        records can be managed directly through the Application
+        or your device.
+    </p>
+
+    <p>
+        For privacy-related questions or requests concerning
+        information handled by HeetDevLab, contact:
     </p>
 
     <p class="email">
@@ -333,18 +475,172 @@
     </p>
 
 
+    <!-- 9 -->
+
+    <h2>9. California Privacy Rights</h2>
+
+    <p>
+        If you are a California resident, applicable California
+        privacy laws may provide rights concerning personal
+        information, including rights to know, delete, correct,
+        or opt out of certain processing or sharing activities.
+    </p>
+
+    <p>
+        To make a privacy-related request, contact:
+    </p>
+
+    <p class="email">
+        sentinex.official.app@gmail.com
+    </p>
+
+
+    <!-- 10 -->
+
+    <h2>10. International Data Transfers</h2>
+
+    <p>
+        Third-party service providers used by the Application may
+        process information in countries other than your country
+        of residence.
+    </p>
+
+    <p>
+        Where applicable law requires safeguards for international
+        transfers, the relevant service provider is responsible
+        for applying appropriate legally recognized safeguards
+        according to its applicable policies and legal obligations.
+    </p>
+
+
+    <!-- 11 -->
+
+    <h2>11. Children's Privacy</h2>
+
+    <p>
+        Sentinex is intended for general users and is not designed
+        to knowingly collect personal information from children.
+    </p>
+
+    <p>
+        Where applicable law requires parental or guardian consent,
+        the Application should only be used with the appropriate
+        supervision or consent.
+    </p>
+
+    <p>
+        If you believe that personal information belonging to a
+        child has been provided to HeetDevLab, please contact us
+        so that we can review the matter and take appropriate
+        action where required.
+    </p>
+
+
+    <!-- 12 -->
+
+    <h2>12. Security</h2>
+
+    <p>
+        We take reasonable measures to protect the information
+        handled by Sentinex.
+    </p>
+
+    <p>
+        Security records generated by Sentinex are designed to
+        remain on the user's device rather than being uploaded to
+        HeetDevLab servers.
+    </p>
+
+    <p>
+        However, no method of electronic storage or transmission
+        can be guaranteed to be completely secure.
+    </p>
+
+
+    <!-- 13 -->
+
+    <h2>13. Data Breach</h2>
+
+    <p>
+        If HeetDevLab becomes aware of a security incident involving
+        personal information under its control, we will take
+        appropriate steps and provide notifications where required
+        by applicable law.
+    </p>
+
+
+    <!-- 14 -->
+
+    <h2>14. Cookies and Tracking Technologies</h2>
+
+    <p>
+        The Sentinex Application itself does not use browser cookies
+        for its core app-lock functionality.
+    </p>
+
+    <p>
+        Third-party services used by the Application, including
+        advertising services, may use technologies such as
+        identifiers or similar technologies according to their
+        own policies and applicable requirements.
+    </p>
+
+
+    <!-- 15 -->
+
+    <h2>15. Changes to This Privacy Policy</h2>
+
+    <p>
+        We may update this Privacy Policy from time to time.
+        When changes are made, the updated version will be published
+        on this page together with a revised effective date.
+    </p>
+
+    <p>
+        We encourage users to periodically review this page for
+        the latest information about our privacy practices.
+    </p>
+
+
+    <!-- 16 -->
+
+    <h2>16. Contact Us</h2>
+
+    <p>
+        If you have any questions, concerns, or privacy-related
+        requests regarding Sentinex, please contact:
+    </p>
+
+    <p class="email">
+        sentinex.official.app@gmail.com
+    </p>
+
+
+    <div class="notice">
+        <p>
+            <strong>Privacy Summary:</strong>
+            Sentinex's core app-lock security records, including
+            protected-app selections, security logs, and intruder
+            photos, are intended to remain stored locally on your
+            device. Sentinex does not operate its own server for
+            storing these security records.
+        </p>
+    </div>
+
+
     <hr>
 
     <p>
-        Policy Version: 1.0
+        <strong>Policy Version:</strong> 1.1
     </p>
 
     <p class="last-line">
-        By using Sentinex, you agree to this Privacy Policy.
+        By using Sentinex, you acknowledge this Privacy Policy.
     </p>
 
 
     <div class="website">
+
         <a
             href="https://heetdevlab.github.io"
             target="_blank"
@@ -352,6 +648,7 @@
         >
             Visit HeetDevLab
         </a>
+
     </div>
 
 
