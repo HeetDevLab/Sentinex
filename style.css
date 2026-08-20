@@ -1,539 +1,1159 @@
-.download-card {
+/* =========================================================
+   SENTINEX SECURE — COMPLETE STYLE
+   ========================================================= */
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            270deg,
+            #020024,
+            #090979,
+            #000000
+        );
+
+    background-size: 600% 600%;
+    animation: bgmove 12s ease infinite;
+}
+
+
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+
+@keyframes bgmove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+
     width: 100%;
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 35px;
+    height: 100%;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+    margin-bottom: 8px;
+
+    text-shadow:
+        0 0 18px #0b5cff;
+}
+
+h2 {
+    margin-top: 6px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 60px;
+
+    background: rgba(5, 10, 25, 0.85);
+
+    backdrop-filter: blur(14px);
+
+    border-bottom:
+        1px solid rgba(0, 195, 255, 0.2);
+
+    z-index: 1000;
+}
+
+
+.nav-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    height: 100%;
+
+    padding: 0 20px;
+
     display: flex;
+
+    justify-content: space-between;
+
     align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* BRAND */
+
+.nav-brand a {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #00c3ff;
+
+    text-decoration: none;
+}
+
+
+/* DESKTOP LINKS */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 26px;
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: white;
+
+    opacity: 0.85;
+
+    transition: 0.3s ease;
+}
+
+
+.nav-links a:hover {
+
+    color: #00c3ff;
+
+    opacity: 1;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+
+.hamburger span {
+
+    width: 26px;
+
+    height: 3px;
+
+    background: white;
+
+    border-radius: 3px;
+
+    transition: 0.3s ease;
+}
+
+
+.hamburger.active span:nth-child(1) {
+
+    transform:
+        rotate(45deg)
+        translate(5px, 5px);
+}
+
+
+.hamburger.active span:nth-child(2) {
+
+    opacity: 0;
+}
+
+
+.hamburger.active span:nth-child(3) {
+
+    transform:
+        rotate(-45deg)
+        translate(6px, -6px);
+}
+
+
+/* =========================
+   NAV OVERLAY
+========================= */
+
+.nav-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 20, 60, 0.6);
+
+    backdrop-filter: blur(6px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+
+    z-index: 900;
+}
+
+
+.nav-overlay.active {
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+body.nav-open {
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    padding:
+        90px 20px 50px;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   SENTINEX LOGO
+========================= */
+
+.logo {
+
+    font-size: 44px;
+
+    font-weight: bold;
+
+    color: #0b5cff;
+
+    text-shadow:
+        0 0 20px #0b5cff;
+
+    margin-bottom: 10px;
+}
+
+
+.sub-info {
+
+    font-size: 15px;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   DOWNLOAD CARD
+========================= */
+
+.download-card {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    display: flex;
+
+    align-items: center;
+
     gap: 30px;
 
-    background: rgba(5, 8, 45, 0.85);
-    border: 1px solid rgba(0, 110, 255, 0.25);
+    box-sizing: border-box;
+
+    background:
+        rgba(5, 8, 45, 0.85);
+
+    border:
+        1px solid rgba(0, 110, 255, 0.25);
+
     border-radius: 25px;
 
     box-shadow:
-        0 0 30px rgba(0, 80, 255, 0.12),
-        inset 0 0 30px rgba(0, 30, 100, 0.15);
+
+        0 0 30px
+        rgba(0, 80, 255, 0.12),
+
+        inset 0 0 30px
+        rgba(0, 30, 100, 0.15);
 }
+
+
+/* =========================
+   APP ICON
+========================= */
+
+.app-icon {
+
+    flex-shrink: 0;
+}
+
 
 .app-icon img {
+
     width: 120px;
+
     height: 120px;
+
     border-radius: 25px;
+
     object-fit: cover;
+
+    display: block;
 }
+
+
+/* =========================
+   APP INFORMATION
+========================= */
 
 .app-info {
+
     flex: 1;
+
+    min-width: 0;
 }
 
+
 .app-info h2 {
+
     margin: 0;
+
     font-size: 30px;
+
     color: #ffffff;
 }
 
+
 .app-info > p {
-    margin: 5px 0 20px;
+
+    margin:
+        5px 0 20px;
+
     color: #9da3c7;
+
     font-size: 16px;
 }
 
+
+/* =========================
+   APP DETAILS
+========================= */
+
 .app-details {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 25px;
+
     margin-bottom: 25px;
 }
 
+
 .app-details div {
+
     display: flex;
+
     flex-direction: column;
 }
 
+
 .app-details strong {
+
     color: #ffffff;
+
     font-size: 18px;
 }
 
+
 .app-details span {
+
     color: #8f96b5;
+
     font-size: 13px;
+
     margin-top: 3px;
 }
 
 
-/* BUTTON CONTAINER */
+/* =========================================================
+   DOWNLOAD BUTTONS
+   ========================================================= */
 
 .download-buttons {
+
     display: flex;
+
     gap: 15px;
+
     flex-wrap: wrap;
+
+    width: 100%;
 }
 
 
 /* COMMON BUTTON */
 
 .download-btn {
+
     min-width: 220px;
-    padding: 13px 20px;
+
+    min-height: 58px;
+
+    padding: 10px 18px;
+
+    box-sizing: border-box;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 12px;
 
     border-radius: 12px;
+
     text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* BUTTON TEXT */
+
+.download-btn small {
+
+    display: block;
+
+    font-size: 10px;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    margin-bottom: 3px;
+}
+
+
+.download-btn strong {
+
+    display: block;
+
+    font-size: 15px;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+
+/* TEXT CONTAINER */
+
+.store-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    line-height: 1.15;
+}
+
+
+/* =========================
+   INDUS APPSTORE IMAGE
+========================= */
+
+.store-logo {
+
+    width: 38px;
+
+    height: 38px;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    flex-shrink: 0;
+
+    display: block;
+}
+
+
+/* =========================
+   INDUS APPSTORE BUTTON
+========================= */
+
+.indus-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #7b2cff,
+            #ff1493
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(140, 40, 255, 0.35);
+}
+
+
+.indus-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 30px
+        rgba(140, 40, 255, 0.6);
+}
+
+
+/* =========================
+   APK ICON
+========================= */
+
+.apk-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    color: white;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   DIRECT APK BUTTON
+========================= */
+
+.apk-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #075cff,
+            #147dff
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 100, 255, 0.3);
+}
+
+
+.apk-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 30px
+        rgba(0, 100, 255, 0.6);
+}
+
+
+/* =========================
+   TRUST / SUB INFO
+========================= */
+
+.trust-badges {
+
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+
+    padding:
+        40px 20px;
+
+    box-sizing: border-box;
+}
+
+
+.card {
+
+    background:
+        rgba(0, 0, 0, 0.45);
+
+    backdrop-filter:
+        blur(10px);
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    max-width: 820px;
+
+    margin: auto;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 0, 0, 0.6);
+}
+
+
+.card p {
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+   ========================================================= */
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.feature {
+
+    background:
+        rgba(0, 0, 0, 0.3);
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+
+.feature p {
+
+    color: #ffffff;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   REVIEW FORM
+   ========================================================= */
+
+textarea,
+select {
+
+    padding: 10px;
+
+    border-radius: 6px;
+
+    border: none;
+
+    width: 90%;
+
+    max-width: 500px;
+
+    background: #020024;
+
+    color: white;
+
+    box-sizing: border-box;
+}
+
+
+textarea {
+
+    resize: vertical;
+}
+
+
+button {
+
+    padding:
+        12px 25px;
+
+    background: #0b5cff;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
 
     transition: 0.25s ease;
 }
 
-.download-btn small {
-    display: block;
-    font-size: 11px;
-    color: rgba(255,255,255,0.75);
-}
 
-.download-btn strong {
-    display: block;
-    font-size: 16px;
-    color: #ffffff;
-}
-
-.btn-icon {
-    font-size: 22px;
-}
-
-
-/* INDUS */
-
-.indus-btn {
-    background: linear-gradient(
-        135deg,
-        #7b2cff,
-        #ff1493
-    );
+button:hover {
 
     box-shadow:
-        0 0 20px rgba(140, 40, 255, 0.35);
-}
-
-.indus-btn:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 0 30px rgba(140, 40, 255, 0.6);
+        0 0 20px #0b5cff;
 }
 
 
-/* APK */
+/* =========================================================
+   FAQ
+   ========================================================= */
 
-.apk-btn {
-    background: linear-gradient(
-        135deg,
-        #075cff,
-        #147dff
-    );
+.faq-item {
 
-    box-shadow:
-        0 0 20px rgba(0, 100, 255, 0.3);
-}
-
-.apk-btn:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 0 30px rgba(0, 100, 255, 0.6);
+    margin-bottom: 10px;
 }
 
 
-/* MOBILE */
+.faq-question {
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    padding: 12px;
+
+    background: #020024;
+
+    border-radius: 6px;
+
+    transition: 0.25s ease;
+}
+
+
+.faq-question:hover {
+
+    background: #05053a;
+}
+
+
+.faq-answer {
+
+    display: none;
+
+    padding: 10px;
+
+    color: #cbd5e1;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   INSTALL GUIDE
+   ========================================================= */
+
+#installGuide {
+
+    line-height: 1.6;
+}
+
+
+#arrow {
+
+    display: inline-block;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+#arrow.rotate {
+
+    transform:
+        rotate(180deg);
+}
+
+
+/* =========================================================
+   PRIVACY / LINKS
+   ========================================================= */
+
+a {
+
+    color: inherit;
+}
+
+
+.card a {
+
+    color: #22c55e;
+
+    text-decoration: none;
+}
+
+
+.card a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.5);
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON PULSE
+   ========================================================= */
+
+@keyframes pulseGlow {
+
+    0% {
+
+        box-shadow:
+            0 0 15px
+            rgba(11, 92, 255, 0.5);
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 30px
+            rgba(11, 92, 255, 1);
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 15px
+            rgba(11, 92, 255, 0.5);
+    }
+}
+
+
+.download-btn.pulse {
+
+    animation:
+        pulseGlow 2.5s infinite;
+}
+
+
+/* =========================================================
+   MOBILE — TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* NAV */
+
+    .hamburger {
+
+        display: flex;
+    }
+
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 60px;
+
+        left: 0;
+
+        width: 100%;
+
+        background:
+            linear-gradient(
+                180deg,
+                #06133a,
+                #030a2b
+            );
+
+        backdrop-filter:
+            blur(20px);
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 22px;
+
+        padding:
+            35px 0;
+
+        transform:
+            translateY(-30px);
+
+        opacity: 0;
+
+        pointer-events: none;
+
+        transition:
+            all 0.35s ease;
+    }
+
+
+    .nav-links.active {
+
+        transform:
+            translateY(0);
+
+        opacity: 1;
+
+        pointer-events: auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — PHONE
+   ========================================================= */
 
 @media (max-width: 700px) {
 
-    .download-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 25px 18px;
+    /* HEADER */
+
+    header {
+
+        padding:
+            85px 15px 40px;
     }
+
+
+    /* LOGO */
+
+    .logo {
+
+        font-size: 38px;
+    }
+
+
+    /* DOWNLOAD CARD */
+
+    .download-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding:
+            25px 18px;
+
+        gap: 20px;
+    }
+
+
+    /* APP ICON */
 
     .app-icon img {
+
         width: 100px;
+
         height: 100px;
+
+        border-radius: 22px;
+
+        margin: auto;
     }
 
+
+    /* APP INFO */
+
+    .app-info {
+
+        width: 100%;
+    }
+
+
     .app-info h2 {
+
         font-size: 26px;
     }
 
+
+    /* APP DETAILS */
+
     .app-details {
+
         justify-content: center;
+
         gap: 18px;
     }
 
+
+    /* DOWNLOAD BUTTONS */
+
     .download-buttons {
+
         flex-direction: column;
+
         width: 100%;
+
+        gap: 12px;
     }
+
 
     .download-btn {
+
         width: 100%;
+
         min-width: 0;
-        box-sizing: border-box;
+
+        min-height: 60px;
+    }
+
+
+    /* FEATURES */
+
+    .feature-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+
+        padding:
+            30px 15px;
+    }
+
+
+    /* CARD */
+
+    .card {
+
+        padding:
+            22px 16px;
     }
 }
 
 
-.app-icon{
-width:70px;
-height:70px;
-border-radius:16px;
-}
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
 
-.app-name{
-font-size:22px;
-color:white;
-margin:0;
-}
+@media (max-width: 380px) {
 
-.developer{
-color:#94a3b8;
-font-size:14px;
-margin-top:2px;
-}
+    .logo {
 
-.app-stats{
-display:flex;
-gap:22px;
-margin-top:10px;
-flex-wrap:wrap;
-}
+        font-size: 32px;
+    }
 
-.stat{
-color:white;
-font-weight:600;
-font-size:15px;
-}
 
-.stat span{
-display:block;
-font-size:11px;
-color:#94a3b8;
-font-weight:400;
-}
-body{
-margin:0;
-font-family:Arial,sans-serif;
-color:white;
-text-align:center;
-background:linear-gradient(270deg,#020024,#090979,#000000);
-background-size:600% 600%;
-animation:bgmove 12s ease infinite;
-}
-h1{
-margin-bottom:8px;
-text-shadow:0 0 18px #0b5cff;  
-}
+    .app-info h2 {
 
-h2{
-margin-top:6px;
-}
-@keyframes bgmove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-#particles-bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
-}
-/* ================= NAVBAR ================= */
-.feature-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
+        font-size: 23px;
+    }
 
-.feature{
-background:rgba(0,0,0,0.3);
-padding:20px;
-border-radius:15px;
-}
 
-.trust-badges{
-margin-top:20px;
-font-size:14px;
-opacity:0.9;
-}
+    .app-details {
 
-.navbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:60px;
-  background:rgba(5,10,25,0.85);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(0,195,255,0.2);
-  z-index:1000;
-}
+        gap: 14px;
+    }
 
-.nav-container{
-  max-width:1100px;
-  margin:auto;
-  height:100%;
-  padding:0 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
 
-.nav-brand a{
-  font-size:20px;
-  font-weight:700;
-  color:#00c3ff;
-  text-decoration:none;
-}
+    .download-btn strong {
 
-/* ===== DESKTOP LINKS ===== */
+        font-size: 14px;
+    }
 
-.nav-links{
-  display:flex;
-  gap:26px;
-}
 
-.nav-links a{
-  text-decoration:none;
-  color:white;
-  opacity:0.85;
-  transition:0.3s ease;
-}
+    .download-btn small {
 
-.nav-links a:hover{
-  color:#00c3ff;
-  opacity:1;
-}
-
-/* ===== HAMBURGER ===== */
-
-.hamburger{
-  display:none;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
-}
-
-.hamburger span{
-  width:26px;
-  height:3px;
-  background:white;
-  border-radius:3px;
-  transition:0.3s ease;
-}
-
-.hamburger.active span:nth-child(1){
-  transform:rotate(45deg) translate(5px,5px);
-}
-
-.hamburger.active span:nth-child(2){
-  opacity:0;
-}
-
-.hamburger.active span:nth-child(3){
-  transform:rotate(-45deg) translate(6px,-6px);
-}
-
-/* ===== MOBILE MENU ===== */
-
-@media (max-width:768px){
-
-  .hamburger{
-    display:flex;
-  }
-
-  .nav-links{
-    position:fixed;
-    top:60px;
-    left:0;
-    width:100%;
-    background:linear-gradient(180deg,#06133a,#030a2b);
-    backdrop-filter:blur(20px);
-    flex-direction:column;
-    align-items:center;
-    gap:22px;
-    padding:35px 0;
-
-    transform:translateY(-30px);
-    opacity:0;
-    pointer-events:none;
-    transition:all 0.35s ease;
-  }
-
-  .nav-links.active{
-    transform:translateY(0);
-    opacity:1;
-    pointer-events:auto;
-  }
-}
-
-/* ===== NAV OVERLAY ===== */
-
-.nav-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,20,60,0.6);
-  backdrop-filter:blur(6px);
-  opacity:0;
-  pointer-events:none;
-  transition:0.3s ease;
-  z-index:900;
-}
-
-.nav-overlay.active{
-  opacity:1;
-  pointer-events:auto;
-}
-
-body.nav-open{
-  overflow:hidden;
-}
-
-/* HEADER FIX */
-header{
-padding:90px 20px 50px;
-max-width:900px;
-margin:auto;
-}
-
-/* LOGO STYLE */
-.logo{
-font-size:44px;
-font-weight:bold;
-color:#0b5cff;
-text-shadow:0 0 20px #0b5cff;
-margin-bottom:10px;
-}
-.sub-info{
-font-size:15px;
-color:#cbd5e1;
-}
-/* BUTTON FIX */
-.download-btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 32px;
-background:#0b5cff;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-size:18px;
-box-shadow:0 0 15px rgba(0,102,255,0.7);
-transition:.3s;
-}
-
-.download-btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 25px rgba(0,102,255,1);
-}
-.download-btn{
-position:sticky;
-top:20px;
-z-index:5;
-}
-/* SECTIONS */
-.section{
-padding:40px 20px;
-}
-
-.card{
-background:rgba(0,0,0,0.45);
-backdrop-filter:blur(10px);
-padding:28px;
-border-radius:16px;
-max-width:820px;
-margin:auto;
-box-shadow:0 0 25px rgba(0,0,0,0.6);
-}
-.card p{
-margin-bottom:18px;
-}
-/* FORM */
-textarea,select{
-padding:10px;
-border-radius:6px;
-border:none;
-width:90%;
-max-width:500px;
-background:#020024;
-color:white;
-}
-
-button{
-padding:12px 25px;
-background:#0b5cff;
-border:none;
-border-radius:8px;
-color:white;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{
-box-shadow:0 0 20px #0b5cff;
-}
-ul{
-line-height:1.8;
-}
-/* FAQ */
-.faq-question{
-cursor:pointer;
-font-weight:bold;
-padding:12px;
-background:#020024;
-border-radius:6px;
-}
-
-.faq-answer{
-display:none;
-padding:10px;
-color:#cbd5e1;
-}
-
-/* FOOTER */
-footer{
-margin-top:40px;
-padding:20px;
-background:rgba(0,0,0,0.5);
-color:#94a3b8;
-}
-.arrow{
-display:inline-block;
-margin-right:8px;
-transition:transform 0.3s ease;
-font-size:20px;
-}
-
-.arrow.rotate{
-transform:rotate(180deg);
-}
-/* Download Button Pulse Glow */
-@keyframes pulseGlow{
-0%{
-box-shadow:0 0 15px rgba(11,92,255,0.5);
-}
-50%{
-box-shadow:0 0 30px rgba(11,92,255,1);
-}
-100%{
-box-shadow:0 0 15px rgba(11,92,255,0.5);
-}
-}
-
-.download-btn.pulse{
-animation:pulseGlow 2.5s infinite;
+        font-size: 9px;
+    }
 }
