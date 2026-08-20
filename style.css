@@ -1,3 +1,188 @@
+.download-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    background: rgba(5, 8, 45, 0.85);
+    border: 1px solid rgba(0, 110, 255, 0.25);
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 30px rgba(0, 80, 255, 0.12),
+        inset 0 0 30px rgba(0, 30, 100, 0.15);
+}
+
+.app-icon img {
+    width: 120px;
+    height: 120px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.app-info {
+    flex: 1;
+}
+
+.app-info h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.app-info > p {
+    margin: 5px 0 20px;
+    color: #9da3c7;
+    font-size: 16px;
+}
+
+.app-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.app-details div {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-details strong {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.app-details span {
+    color: #8f96b5;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+/* BUTTON CONTAINER */
+
+.download-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* COMMON BUTTON */
+
+.download-btn {
+    min-width: 220px;
+    padding: 13px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border-radius: 12px;
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.download-btn small {
+    display: block;
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+}
+
+.download-btn strong {
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.btn-icon {
+    font-size: 22px;
+}
+
+
+/* INDUS */
+
+.indus-btn {
+    background: linear-gradient(
+        135deg,
+        #7b2cff,
+        #ff1493
+    );
+
+    box-shadow:
+        0 0 20px rgba(140, 40, 255, 0.35);
+}
+
+.indus-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 30px rgba(140, 40, 255, 0.6);
+}
+
+
+/* APK */
+
+.apk-btn {
+    background: linear-gradient(
+        135deg,
+        #075cff,
+        #147dff
+    );
+
+    box-shadow:
+        0 0 20px rgba(0, 100, 255, 0.3);
+}
+
+.apk-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 30px rgba(0, 100, 255, 0.6);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .download-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 18px;
+    }
+
+    .app-icon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .app-info h2 {
+        font-size: 26px;
+    }
+
+    .app-details {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .download-btn {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+}
 .app-info{
 display:flex;
 align-items:center;
