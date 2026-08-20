@@ -301,7 +301,49 @@ header {
 /* =========================
    DOWNLOAD CARD
 ========================= */
+/* =========================
+   STORE BANNER
+========================= */
 
+.download-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.store-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.store-banner {
+    display: block;
+
+    width: 240px;
+    height: auto;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.store-link:hover {
+    transform: scale(1.04);
+    filter: brightness(1.1);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .store-banner {
+        width: 230px;
+        max-width: 100%;
+    }
+}
 .download-card {
 
     width: 100%;
