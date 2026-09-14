@@ -1,513 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Sentinex Secure",
-  "operatingSystem": "Android",
-  "applicationCategory": "SecurityApplication",
-  "creator": {
-    "@type": "Organization",
-    "name": "HeetDevLab"
-  },
-  "url": "https://heetdevlab.github.io/Sentinex/",
-  "description": "Sentinex Secure is a lightweight Android app lock that protects your apps using PIN security, Usage Access detection and overlay protection.",
-"logo": "https://heetdevlab.github.io/sentinex-icon.png"
-}
-}
-</script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sentinex Secure – Lightweight Android App Lock</title>
-
-<meta name="description" content="Sentinex Secure protects your apps using PIN security, Usage Access detection and overlay protection. Lightweight, offline and privacy focused.">
-
-<meta property="og:title" content="Sentinex Secure – Android App Lock">
-<meta property="og:description" content="Protect your apps with Sentinex Secure. Lightweight, offline and privacy focused.">
-<meta property="og:image" content="https://heetdevlab.github.io/Sentinex/preview.png">
-<meta property="og:url" content="https://heetdevlab.github.io/Sentinex/">
-<meta property="og:type" content="website">
-
+<meta name="description" content="Sentinex Secure — lightweight Android app lock focused on privacy, offline use and device-side protection.">
+<meta property="og:title" content="Sentinex Secure | Smart App Lock">
+<meta property="og:description" content="Protect private apps with Sentinex Secure. Lightweight, offline and privacy focused.">
+<title>Sentinex Secure | Smart App Lock</title>
+<link rel="icon" type="image/png" href="sentinex-favicon.png">
 <link rel="stylesheet" href="style.css">
-
-<link rel="icon" type="image/png" sizes="512x512" href="https://heetdevlab.github.io/Sentinex/sentinex-favicon.png">
-<link rel="apple-touch-icon" href="https://heetdevlab.github.io/Sentinex/sentinex-favicon.png">
-
-
 </head>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
+<body>
 <div id="particles-bg"></div>
 
-<body>
-
 <nav class="navbar">
- <div class="nav-overlay" id="navOverlay"></div>
   <div class="nav-container">
-
-    <div class="nav-brand">
-      <a href="/">HeetDevLab</a>
-    </div>
-
-   <div class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-   </div>
+    <a class="brand" href="/">HeetDevLab<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
     <div class="nav-links" id="navLinks">
-      <a href="/">Home</a>
-      <a href="/Sentinex/">Sentinex</a>
-      <a href="/Blog/">Blog</a>
-      <a href="/Webtools/">WebTools</a>
-      <a href="https://youtube.com/@heetplayscode" target="_blank">YouTube</a>
+      <a href="/">Home</a><a href="/Sentinex/">Sentinex</a><a href="/Webtools/">WebTools</a><a href="/portfolio/">Portfolio</a><a href="/Blog/">Blog</a>
+      <a href="https://youtube.com/@heetplayscode" target="_blank" rel="noopener">YouTube</a>
     </div>
-<div class="nav-overlay" id="navOverlay"></div>
   </div>
 </nav>
+<div class="menu-backdrop" id="menuBackdrop"></div>
 
-
-<header>
-
-<div class="logo">SENTINEX 🔒</div> 
-<!--
-<div class="logo">Sentinex Secure</h1> 
-</div>
--->
-<p style="color:#ffffff;font-weight:bold;margin-top:6px;">
-Smart App Lock Protection 
-</p>
-
-<div class="download-card">
-    <div class="app-icon">
-        <img src="sentinex-icon.png" alt="Sentinex Secure">
-    </div>
-
-    <div class="app-info">
-        <h2>Sentinex Secure</h2>
-        <p>By HeetDevLab</p>
-
-        <div class="app-details">
-            <div>
-                <strong>1.0.1</strong>
-                <span>Version</span>
-            </div>
-
-            <div>
-                <strong>9 MB</strong>
-                <span>File Size</span>
-            </div>
-
-            <div>
-                <strong>Security</strong>
-                <span>Category</span>
-            </div>
-
-            <div>
-                <strong>Android 8+</strong>
-                <span>Android OS</span>
-            </div>
+<main>
+<section class="product-hero">
+  <div class="hero-inner">
+    <div class="product-mark">SENTINEX <span>🔒</span></div>
+    <p class="kicker">SMART APP LOCK PROTECTION</p>
+    <div class="download-card">
+      <div class="icon-wrap"><img src="sentinex-icon.png" alt="Sentinex Secure app icon"></div>
+      <div class="app-copy">
+        <div class="status">● LIVE PRODUCT</div>
+        <h1>Sentinex Secure</h1>
+        <p class="byline">By HeetDevLab</p>
+        <div class="meta-grid">
+          <div><strong>1.0.1</strong><span>Version</span></div>
+          <div><strong>9 MB</strong><span>File size</span></div>
+          <div><strong>Security</strong><span>Category</span></div>
+          <div><strong>Android 8+</strong><span>OS</span></div>
         </div>
-
-        <!-- DOWNLOAD BUTTONS -->
-        <!-- DOWNLOAD BUTTONS -->
-<div class="download-buttons">
-
-    <!-- INDUS APPSTORE 
-    <a
-        href="https://www.indusappstore.com/apps/tools/sentinex-secure/com.heetdevlab.sentinex/?page=details&id=com.heetdevlab.sentinex"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="store-link"
-    >
-        <img
-            src="indus-appstore.png"
-            alt="Download on Indus Appstore"
-            class="store-banner"
-        >
-    </a>
--->
-   <a href='https://indusapp.store/0v8e27zi'
-        target="_blank"
-        rel="noopener noreferrer"
-        class="store-link">
-<img alt='Get it on Indus Appstore'
-class="store-banner" src='https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-background-english.png'/></a>
-</div>
-
-
-    <!-- DIRECT APK 
-    <a
-        href="assets/Sentinex-Secure.apk"
-        class="download-btn apk-btn"
-        download
-    >
-        <span class="apk-icon">⬇</span>
-
-        <span class="store-text">
-            <small>Download</small>
-            <strong>APK Directly</strong>
-        </span>
-    </a>
-
-</div>-->
+        <a class="indus-btn" href="https://indusapp.store/0v8e27zi" target="_blank" rel="noopener">
+          <span>GET IT ON</span><strong>Indus Appstore</strong>
+        </a>
+        <div class="trust">No signup <i></i> Works offline <i></i> No data collection</div>
+      </div>
     </div>
-</div>
-
-
-<p style="color:#94a3b8;font-size:13px;margin-top:6px;">
-No signup • Works Offline • No Data Collection
-</p>
-
-</div>
-
-<p class="sub-info">
-Advanced Android App Lock & Privacy Protection
-</p>
-
-<!--p style="color:#0b5cff;font-weight:bold;">
-✔ Indie Built • ✔ Privacy Focused • ✔ Offline First
-</p>-->
-  
-
-
-<div class="card" style="max-width:750px;text-align:left;margin-top:30px;">
-
-<p style="color:#cbd5e1;line-height:1.6;">
-
-Some Android devices may show a Play Protect warning because Sentinex
-is installed directly from this website.
-
-<br><br>
-
-This is completely normal for independent apps and
-<b style="color:white;">does NOT mean the app is unsafe.</b>
-
-</p>
-
-<div onclick="toggleInstallGuide()"
-style="cursor:pointer;
-padding:16px;
-font-weight:bold;
-font-size:18px;
-border-radius:12px;
-background:rgba(11,92,255,0.15);
-color:#0b5cff;
-text-align:center;">
-
-<span id="arrow">⌵</span>
-Install Guide — Safe & Trusted
-
-</div>
-
-<div id="installGuide"
-style="display:none;padding:18px 6px;color:#cbd5e1;line-height:1.6;">
-
-<b>✔ Quick Install</b><br>
-
-• Tap Install<br>
-
-• Open the app<br>
-
-• Allow <b>Usage Access</b><br>
-
-• Allow <b>Display Over Other Apps</b><br><br>
-
-<p style="color:#94a3b8;">
-Works offline • No data collected • Safe permissions
-</p>
-
-</div>
-
-</div>
-
-</header>
-
-
-<div class="section">
-
-<div class="card">
-  
-<h2>Key Features</h2>
-
-<div class="feature-grid">
-
-<div class="feature">
-🔐 App Lock Protection
-<p>Secure your private apps with PIN protection and biometric unlock for additional.</p>
-</div>
-
-<div class="feature">
-📸 Intruder Detection
-<p>Capture photo when someone enters wrong PIN.</p>
-</div>
-
-<div class="feature">
-📊 Unlock Logs
-<p>Track every unlock attempt with time.</p>
-</div>
-
-<div class="feature">
-🛡 Privacy First
-<p>No tracking. No analytics. Everything stays on your device.</p>
-</div>
-
-</div>
-  
-</div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>Submit Your Review</h2>
-
-<form action="https://formsubmit.co/sentinex.official.app@gmail.com" method="POST">
-
-<input type="hidden" name="_captcha" value="false">
-
-<select name="Rating" required>
-
-<option value="">Select Rating</option>
-
-<option>⭐⭐⭐⭐⭐ - Excellent</option>
-
-<option>⭐⭐⭐⭐ - Very Good</option>
-
-<option>⭐⭐⭐ - Good</option>
-
-<option>⭐⭐ - Average</option>
-
-<option>⭐ - Poor</option>
-
-</select>
-
-<br><br>
-
-<textarea name="Review" rows="5" required></textarea>
-
-<br><br>
-
-<button type="submit">Submit Review</button>
-
-</form>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>FAQ</h2>
-
-<div class="faq-item">
-
-<div class="faq-question" onclick="toggleFAQ(this)">
-Why does Play Protect show warning?
-</div>
-
-<div class="faq-answer">
-
-Because the app is installed directly from the website
-instead of Google Play Store.
-
-</div>
-
-</div>
-
-
-<div class="faq-item">
-
-<div class="faq-question" onclick="toggleFAQ(this)">
-Does Sentinex collect data?
-</div>
-
-<div class="faq-answer">
-
-No. Sentinex works completely offline and does not collect
-any personal data.
-
-</div>
-
-</div>
-
-
-<div class="faq-item">
-
-<div class="faq-question" onclick="toggleFAQ(this)">
-What permissions does Sentinex require?
-</div>
-
-<div class="faq-answer">
-
-Sentinex requires Usage Access to detect opened apps
-and Display Over Other Apps permission to show the lock screen.
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>Privacy Policy</h2>
-
-<p>
-Read full privacy policy
-<a href="/Sentinex/privacy/index.html" style="color:#22c55e;">here</a>
-</p>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h3 style="color:#0b5cff;">👨‍💻Developer</h3>
-
-<p><b>Developed by Heet Shah</b></p>
-
-<p>Contact: sentinex.official.app@gmail.com</p>
-
-<p>Personal Contact: heets85520@gmail.com</p>
-
-</div>
-
-</div>
-
-
-<footer>
-
-© 2026 Sentinex • Powered by HeetDevLab
-
-</footer>
-
-
-<script>
-// Download Counter (Browser Based)
-function increaseDownload() {
-    let count = localStorage.getItem("downloadCount");
-    count = count ? parseInt(count) + 1 : 1;
-    localStorage.setItem("downloadCount", count);
-    document.getElementById("downloadCount").innerText = count;
-}
-
-window.onload = function() {
-    let saved = localStorage.getItem("downloadCount");
-    if (saved) {
-        document.getElementById("downloadCount").innerText = saved;
-    }
-}
-
-// FAQ Toggle
-function toggleFAQ(element) {
-    let answer = element.nextElementSibling;
-    answer.style.display =
-        answer.style.display === "block" ? "none" : "block";
-}
-function toggleInstallGuide(){
-let box=document.getElementById("installGuide");
-let arrow=document.getElementById("arrow");
-
-if(box.style.display==="block"){
-box.style.display="none";
-arrow.classList.remove("rotate");
-}else{
-box.style.display="block";
-arrow.classList.add("rotate");
-}
-}
-
-// Add Pulse Glow on Load
-window.addEventListener("load", function(){
-
-const btn = document.querySelector(".download-btn");
-
-if(btn){
-btn.classList.add("pulse");
-}
-
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("navLinks");
-  const overlay = document.getElementById("navOverlay");
-  const links = navLinks.querySelectorAll("a");
-
-  hamburger.addEventListener("click", function(){
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("nav-open");
-  });
-
-  overlay.addEventListener("click", closeMenu);
-
-  links.forEach(link=>{
-    link.addEventListener("click", closeMenu);
-  });
-
-  function closeMenu(){
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("active");
-    overlay.classList.remove("active");
-    document.body.classList.remove("nav-open");
-  }
-
-});
-particlesJS("particles-bg",{
-"particles":{
-"number":{"value":60},
-"color":{"value":"#ffffff"},
-"shape":{"type":"circle"},
-"opacity":{"value":0.4},
-"size":{"value":2},
-"line_linked":{
-"enable":true,
-"distance":140,
-"color":"#ffffff",
-"opacity":0.3,
-"width":1
-},
-"move":{
-"enable":true,
-"speed":1
-}
-},
-"interactivity":{
-"events":{
-"onhover":{"enable":true,"mode":"grab"}
-}
-}
-});
-</script>
-</body>
-
-</html>
-
-    
+  </div>
+</section>
+
+<section class="intro section-wrap">
+  <div class="intro-copy">
+    <span>PROTECTION WITHOUT THE NOISE</span>
+    <h2>Keep private apps private.</h2>
+    <p>Sentinex is designed as a lightweight Android app lock with device-side protection and a straightforward setup.</p>
+  </div>
+  <div class="mini-points">
+    <div><b>🔐</b><span>App Lock<br><small>PIN & biometric protection</small></span></div>
+    <div><b>📸</b><span>Intruder Detection<br><small>Capture wrong-PIN attempts</small></span></div>
+    <div><b>📊</b><span>Unlock Logs<br><small>See unlock attempts with time</small></span></div>
+  </div>
+</section>
+
+<section class="section-wrap">
+  <div class="warning">
+    <div class="warning-icon">ⓘ</div>
+    <div>
+      <h3>Installing outside Google Play?</h3>
+      <p>Some Android devices may show a Play Protect warning when an app is installed directly from an independent website. That warning can occur because the installation source is outside Google Play; users should review the warning and permissions before installing.</p>
+      <button id="installToggle">⌄ <span>View install guide</span></button>
+      <div id="installGuide" class="install-guide">
+        <b>Quick setup</b>
+        <ol><li>Install the APK or use the Indus Appstore listing.</li><li>Open Sentinex and complete the initial setup.</li><li>Allow Usage Access when prompted.</li><li>Allow Display Over Other Apps when prompted.</li></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-wrap feature-section">
+  <div class="section-title"><span>CORE PROTECTION</span><h2>Key Features</h2></div>
+  <div class="feature-grid">
+    <article><div class="feature-icon">🔐</div><h3>App Lock Protection</h3><p>Secure private apps with PIN protection and biometric unlock support.</p></article>
+    <article><div class="feature-icon">📸</div><h3>Intruder Detection</h3><p>Capture a photo when an incorrect PIN attempt is detected.</p></article>
+    <article><div class="feature-icon">📊</div><h3>Unlock Logs</h3><p>Review unlock attempts and their recorded times on the device.</p></article>
+    <article><div class="feature-icon">🛡️</div><h3>Privacy First</h3><p>No tracking or analytics by design; the product is focused on local use.</p></article>
+  </div>
+</section>
+
+<section class="section-wrap">
+  <div class="section-title"><span>QUESTIONS</span><h2>FAQ</h2></div>
+  <div class="faq">
+    <button class="faq-q">Does Sentinex collect data?<b>+</b></button><div class="faq-a">Sentinex is designed to work offline and does not collect personal data through an online account.</div>
+    <button class="faq-q">Why does Android show a Play Protect warning?<b>+</b></button><div class="faq-a">Android may warn when an app is installed from outside Google Play. Always review the source, requested permissions and security warning before proceeding.</div>
+    <button class="faq-q">What permissions are used?<b>+</b></button><div class="faq-a">Usage Access is used to detect opened apps, and Display Over Other Apps is used to present the lock screen.</div>
+  </div>
+</section>
+
+<section class="section-wrap review-section">
+  <div class="review-card">
+    <span>YOUR EXPERIENCE</span><h2>Leave a Review</h2><p>Share your experience with Sentinex Secure.</p>
+    <form action="https://formsubmit.co/sentinex.official.app@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <select name="Rating" required><option value="">Select rating</option><option>⭐⭐⭐⭐⭐ - Excellent</option><option>⭐⭐⭐⭐ - Very Good</option><option>⭐⭐⭐ - Good</option><option>⭐⭐ - Average</option><option>⭐ - Poor</option></select>
+      <textarea name="Review" rows="5" placeholder="Write your review..." required></textarea>
+      <button class="submit-btn" type="submit">Submit Review →</button>
+    </form>
+  </div>
+</section>
+
+<section class="section-wrap developer">
+  <div><span>DEVELOPER</span><h2>Built by HeetDevLab</h2><p>Developed by Heet Shah.</p></div>
+  <a href="mailto:sentinex.official.app@gmail.com" class="mail-btn">Contact Developer</a>
+</section>
+</main>
+
+<footer>© 2026 Sentinex • Powered by HeetDevLab</footer>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
