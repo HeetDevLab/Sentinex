@@ -9,6 +9,49 @@
 <title>Sentinex Secure | Smart App Lock</title>
 <link rel="icon" type="image/png" href="sentinex-favicon.png">
 <link rel="stylesheet" href="style.css">
+  <style>
+  /* ===== HeetDevLab UNIVERSAL MOBILE NAV FIX ===== */
+.navbar{z-index:5000!important;}
+.nav-container{position:relative;z-index:5002!important;}
+.hamburger{
+  position:relative!important;
+  width:36px!important;
+  height:36px!important;
+  display:none;
+  flex:0 0 36px;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-direction:column!important;
+  gap:0!important;
+  cursor:pointer;
+  z-index:5005!important;
+  -webkit-tap-highlight-color:transparent;
+}
+.hamburger span{
+  position:absolute!important;
+  left:5px!important;
+  width:26px!important;
+  height:3px!important;
+  margin:0!important;
+  display:block!important;
+  background:#fff!important;
+  border-radius:99px!important;
+  transform-origin:center!important;
+  transition:transform .25s ease,opacity .2s ease,top .25s ease!important;
+}
+.hamburger span:nth-child(1){top:9px!important;}
+.hamburger span:nth-child(2){top:16.5px!important;}
+.hamburger span:nth-child(3){top:24px!important;}
+.hamburger.active span:nth-child(1){top:16.5px!important;transform:rotate(45deg)!important;}
+.hamburger.active span:nth-child(2){opacity:0!important;transform:scaleX(0)!important;}
+.hamburger.active span:nth-child(3){top:16.5px!important;transform:rotate(-45deg)!important;}
+.nav-overlay{z-index:4998!important;}
+.nav-links{z-index:5001!important;}
+@media(max-width:768px){
+  .hamburger{display:flex!important;}
+  .nav-links{z-index:5001!important;}
+}
+  </style>
 </head>
 <body>
 <div id="particles-bg"></div>
