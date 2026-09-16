@@ -25,34 +25,3 @@ document.addEventListener("DOMContentLoaded",()=>{
 if(typeof particlesJS!=="undefined"){
   particlesJS("particles-bg",{particles:{number:{value:55,density:{enable:true,value_area:900}},color:{value:"#176cff"},shape:{type:"circle"},opacity:{value:.35},size:{value:2.3},line_linked:{enable:true,distance:150,color:"#176cff",opacity:.2,width:1},move:{enable:true,speed:.65}},interactivity:{events:{onhover:{enable:true,mode:"grab"}}}});
 }
-
-
-/* ===== HeetDevLab UNIVERSAL NAV SCRIPT ===== */
-(function(){
-  function initHeetNav(){
-    const hamburger=document.getElementById('hamburger');
-    const navLinks=document.getElementById('navLinks');
-    const overlay=document.getElementById('navOverlay');
-    if(!hamburger||!navLinks) return;
-    if(hamburger.dataset.navReady==='1') return;
-    hamburger.dataset.navReady='1';
-    function setOpen(open){
-      hamburger.classList.toggle('active',open);
-      navLinks.classList.toggle('active',open);
-      if(overlay) overlay.classList.toggle('active',open);
-      document.body.classList.toggle('nav-open',open);
-      hamburger.setAttribute('aria-expanded',String(open));
-      hamburger.setAttribute('aria-label',open?'Close menu':'Open menu');
-    }
-    hamburger.setAttribute('role','button');
-    hamburger.setAttribute('tabindex','0');
-    hamburger.setAttribute('aria-expanded','false');
-    hamburger.setAttribute('aria-label','Open menu');
-    hamburger.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();setOpen(!hamburger.classList.contains('active'));});
-    hamburger.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();setOpen(!hamburger.classList.contains('active'));}});
-    if(overlay) overlay.addEventListener('click',function(){setOpen(false);});
-    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
-    window.addEventListener('resize',()=>{if(window.innerWidth>768)setOpen(false);});
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initHeetNav); else initHeetNav();
-})();
