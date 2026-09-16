@@ -10,58 +10,389 @@
 <link rel="icon" type="image/png" href="sentinex-favicon.png">
 <link rel="stylesheet" href="style.css">
   <style>
-  /* ===== HeetDevLab UNIVERSAL MOBILE NAV FIX ===== */
-.navbar{z-index:5000!important;}
-.nav-container{position:relative;z-index:5002!important;}
+/* ================= NAVBAR ================= */
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:5000;
+  height:72px;
+  border-bottom:1px solid rgba(45,190,255,.14);
+  background:rgba(3,9,29,.82);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+.nav-container{
+  width:min(1180px,calc(100% - 32px));
+  height:100%;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  position:relative;
+  z-index:5002;
+}
+
+
+/* ---------- BRAND ---------- */
+
+.nav-brand a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
+
+.brand-mark{
+  width:31px;
+  height:31px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid rgba(24,215,255,.42);
+  border-radius:9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(24,215,255,.15),
+      rgba(40,120,255,.10)
+    );
+
+  color:#18d7ff;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+
+  font-size:11px;
+  font-weight:900;
+
+  box-shadow:
+    0 0 20px rgba(24,215,255,.10);
+}
+
+.brand-name{
+  font-size:24px;
+  line-height:1;
+
+  font-weight:850;
+  letter-spacing:-1.1px;
+
+  color:#f4f8ff;
+  white-space:nowrap;
+}
+
+.brand-name span{
+  background:
+    linear-gradient(
+      90deg,
+      #18d7ff,
+      #62e9ff
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+}
+
+.brand-name b{
+  color:#18d7ff;
+
+  text-shadow:
+    0 0 13px rgba(24,215,255,.5);
+}
+
+
+/* ---------- DESKTOP LINKS ---------- */
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+.nav-links a{
+  position:relative;
+
+  padding:10px 13px;
+  border-radius:10px;
+
+  color:#aebed5;
+  text-decoration:none;
+
+  font-size:13px;
+  font-weight:650;
+
+  transition:.2s ease;
+}
+
+.nav-links a:hover{
+  color:#fff;
+  background:rgba(24,215,255,.08);
+}
+
+.nav-links a::after{
+  content:"";
+
+  position:absolute;
+
+  left:13px;
+  right:13px;
+  bottom:5px;
+
+  height:2px;
+
+  border-radius:9px;
+
+  background:#18d7ff;
+
+  transform:scaleX(0);
+  transition:transform .2s ease;
+}
+
+.nav-links a:hover::after{
+  transform:scaleX(1);
+}
+
+.nav-links .new{
+  color:#58ffae;
+
+  font-size:9px;
+  margin-left:3px;
+
+  font-weight:900;
+}
+
+
+/* ---------- HAMBURGER ---------- */
+
 .hamburger{
-  position:relative!important;
-  width:36px!important;
-  height:36px!important;
   display:none;
-  flex:0 0 36px;
-  align-items:center!important;
-  justify-content:center!important;
-  flex-direction:column!important;
-  gap:0!important;
+
+  width:42px;
+  height:42px;
+
+  padding:0;
+
+  border:1px solid rgba(45,190,255,.18);
+  border-radius:12px;
+
+  background:rgba(8,25,55,.7);
+
   cursor:pointer;
-  z-index:5005!important;
+
+  position:relative;
+  z-index:5005;
+
   -webkit-tap-highlight-color:transparent;
 }
+
 .hamburger span{
-  position:absolute!important;
-  left:5px!important;
-  width:26px!important;
-  height:3px!important;
-  margin:0!important;
-  display:block!important;
-  background:#fff!important;
-  border-radius:99px!important;
-  transform-origin:center!important;
-  transition:transform .25s ease,opacity .2s ease,top .25s ease!important;
+  position:absolute;
+
+  left:10px;
+
+  width:22px;
+  height:3px;
+
+  border-radius:99px;
+
+  background:#fff;
+
+  transition:
+    top .22s ease,
+    transform .22s ease,
+    opacity .18s ease;
 }
-.hamburger span:nth-child(1){top:9px!important;}
-.hamburger span:nth-child(2){top:16.5px!important;}
-.hamburger span:nth-child(3){top:24px!important;}
-.hamburger.active span:nth-child(1){top:16.5px!important;transform:rotate(45deg)!important;}
-.hamburger.active span:nth-child(2){opacity:0!important;transform:scaleX(0)!important;}
-.hamburger.active span:nth-child(3){top:16.5px!important;transform:rotate(-45deg)!important;}
-.nav-overlay{z-index:4998!important;}
-.nav-links{z-index:5001!important;}
-@media(max-width:768px){
-  .hamburger{display:flex!important;}
-  .nav-links{z-index:5001!important;}
+
+/* 3 Lines */
+
+.hamburger span:nth-child(1){
+  top:12px;
 }
-    /* ===== Premium HeetDevLab Navbar Branding ===== */
-.nav-brand{display:flex!important;align-items:center!important;}
-.nav-brand>a{display:inline-flex!important;align-items:center!important;gap:9px!important;text-decoration:none!important;line-height:1!important;}
-.brand-mark{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid rgba(24,215,232,.38);border-radius:9px;background:linear-gradient(135deg,rgba(24,215,232,.14),rgba(22,89,255,.10));box-shadow:0 0 18px rgba(24,215,232,.10),inset 0 0 14px rgba(24,215,232,.05);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:800;letter-spacing:-1px;color:#18d7e8;}
-.brand-name{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;font-size:25px!important;font-weight:800!important;letter-spacing:-1.15px!important;color:#f4f8ff!important;text-shadow:0 0 22px rgba(24,215,232,.08);}
-.brand-name span{background:linear-gradient(90deg,#18d7e8,#5ee7ff);-webkit-background-clip:text;background-clip:text;color:transparent;}
-.brand-name b{color:#18d7e8;font-weight:900;text-shadow:0 0 12px rgba(24,215,232,.55);}
-@media(max-width:768px){
- .nav-brand>a{gap:8px!important;}
- .brand-mark{width:28px;height:28px;border-radius:8px;font-size:11px;}
- .brand-name{font-size:23px!important;letter-spacing:-1px!important;}
+
+.hamburger span:nth-child(2){
+  top:19px;
+}
+
+.hamburger span:nth-child(3){
+  top:26px;
+}
+
+
+/* ---------- HAMBURGER → X ---------- */
+
+.hamburger.active span:nth-child(1){
+  top:19px;
+  transform:rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+  opacity:0;
+  transform:scaleX(0);
+}
+
+.hamburger.active span:nth-child(3){
+  top:19px;
+  transform:rotate(-45deg);
+}
+
+
+/* ---------- OVERLAY ---------- */
+
+.nav-overlay{
+  display:none;
+}
+
+body.nav-open{
+  overflow:hidden;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+  .navbar{
+    height:66px;
+  }
+
+  .nav-container{
+    width:calc(100% - 24px);
+  }
+
+  .brand-mark{
+    width:29px;
+    height:29px;
+    border-radius:8px;
+    font-size:10px;
+  }
+
+  .brand-name{
+    font-size:22px;
+    letter-spacing:-1px;
+  }
+
+  .hamburger{
+    display:block;
+  }
+
+
+  /* ---------- OVERLAY ---------- */
+
+  .nav-overlay{
+    position:fixed;
+
+    inset:66px 0 0;
+
+    display:block;
+
+    background:rgba(0,0,0,.42);
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+
+    transition:.2s ease;
+
+    z-index:4998;
+  }
+
+  .nav-overlay.active{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+
+
+  /* ---------- MOBILE MENU ---------- */
+
+  .nav-links{
+    position:absolute;
+
+    top:59px;
+    left:0;
+    right:0;
+
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+
+    gap:2px;
+
+    padding:10px;
+
+    border:1px solid rgba(24,215,255,.22);
+    border-radius:18px;
+
+    background:rgba(4,14,36,.98);
+
+    box-shadow:
+      0 24px 70px rgba(0,0,0,.55);
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+
+    transform:
+      translateY(-8px)
+      scale(.98);
+
+    transform-origin:top center;
+
+    transition:.22s ease;
+
+    z-index:5001;
+  }
+
+  .nav-links.active{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  .nav-links a{
+    padding:14px 14px;
+    border-radius:11px;
+
+    font-size:15px;
+  }
+
+  .nav-links a::after{
+    display:none;
+  }
+
+  .nav-links a:hover{
+    background:rgba(24,215,255,.08);
+  }
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media(min-width:801px) and (max-width:1050px){
+
+  .nav-links{
+    gap:2px;
+  }
+
+  .nav-links a{
+    padding-left:9px;
+    padding-right:9px;
+  }
 }
   </style>
 </head>
@@ -79,30 +410,54 @@
   </div>
 </nav>
   -->
-<nav class="navbar">
- <div class="nav-overlay" id="navOverlay"></div>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" aria-label="Main navigation">
   <div class="nav-container">
 
+    <!-- Brand -->
     <div class="nav-brand">
       <a href="/" aria-label="HeetDevLab Home">
         <span class="brand-mark">&lt;/&gt;</span>
-        <span class="brand-name">Heet<span>Dev</span>Lab<b>.</b></span>
+        <span class="brand-name">
+          Heet<span>Dev</span>Lab<b>.</b>
+        </span>
       </a>
     </div>
 
-   <div class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-   </div>
+    <!-- Mobile Menu Button -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation Links -->
     <div class="nav-links" id="navLinks">
       <a href="/">Home</a>
       <a href="/Sentinex/">Sentinex</a>
-      <a href="/Webtools/">WebTools</a>
-     <a href="/portfolio/">Portfolio</a>
-     <a href="/Blog/">Blog</a>
-      <a href="https://youtube.com/@heetplayscode" target="_blank">YouTube</a>
+      <a href="/Webtools/">
+        WebTools <span class="new">NEW</span>
+      </a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/Blog/">Blog</a>
+      <a
+        href="https://youtube.com/@heetplayscode"
+        target="_blank"
+        rel="noopener"
+      >
+        YouTube
+      </a>
     </div>
+
+    <!-- Mobile Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
 
   </div>
 </nav>
@@ -200,7 +555,97 @@
 </main>
 
 <footer>© 2026 Sentinex • Powered by HeetDevLab</footer>
+<script>
+(function(){
 
+  const hamburger = document.getElementById("hamburger");
+  const navLinks  = document.getElementById("navLinks");
+  const overlay   = document.getElementById("navOverlay");
+
+  if(!hamburger || !navLinks) return;
+
+
+  function setMenu(open){
+
+    hamburger.classList.toggle("active", open);
+    navLinks.classList.toggle("active", open);
+
+    if(overlay){
+      overlay.classList.toggle("active", open);
+    }
+
+    hamburger.setAttribute(
+      "aria-expanded",
+      String(open)
+    );
+
+    hamburger.setAttribute(
+      "aria-label",
+      open ? "Close menu" : "Open menu"
+    );
+
+    document.body.classList.toggle(
+      "nav-open",
+      open
+    );
+  }
+
+
+  /* Hamburger click */
+
+  hamburger.addEventListener("click", function(){
+
+    const isOpen =
+      hamburger.classList.contains("active");
+
+    setMenu(!isOpen);
+
+  });
+
+
+  /* Close menu when link clicked */
+
+  navLinks
+    .querySelectorAll("a")
+    .forEach(function(link){
+
+      link.addEventListener("click", function(){
+        setMenu(false);
+      });
+
+    });
+
+
+  /* Close when overlay clicked */
+
+  if(overlay){
+
+    overlay.addEventListener(
+      "click",
+      function(){
+        setMenu(false);
+      }
+    );
+
+  }
+
+
+  /* Close on resize */
+
+  window.addEventListener(
+    "resize",
+    function(){
+
+      if(window.innerWidth > 800){
+        setMenu(false);
+      }
+
+    }
+  );
+
+
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="script.js"></script>
 </body>
