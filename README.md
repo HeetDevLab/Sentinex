@@ -41,7 +41,7 @@ A lightweight version of Sentinex for users who want essential security features
 
 Visit the official Sentinex website:
 
-👉 https://heetdevlab.github.io/Sentinex/
+👉 https://heetdevlab.github.io/
 
 ---
 
