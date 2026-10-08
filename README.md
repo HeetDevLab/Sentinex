@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&height=240&color=0:050B14,45:0B3440,100:13CFE5&text=Sentinex&fontSize=64&fontColor=ffffff&fontAlignY=42&desc=Android%20Security%20%26%20Privacy%20App&descAlignY=65&descSize=20&animation=twinkling" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&height=240&color=0:050B14,45:0B3440,100:13CFE5&text=Sentinex&fontSize=64&fontColor=ffffff&fontAlignY=42&desc=Android%20Security%20and%20Privacy%20App&descAlignY=65&descSize=20&animation=twinkling" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=2500&pause=800&color=13CFE5&center=true&vCenter=true&width=760&height=45&lines=%F0%9F%94%92+Lock+Your+Private+Apps;%F0%9F%91%BB+Hide+Behind+Ghost+Mode;%F0%9F%93%B8+Catch+Intruders+Instantly;%F0%9F%8E%AD+Disguise+Your+App;%E2%9A%A1+Lightweight+%26+Fast" alt="Typing animation"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=2500&pause=800&color=13CFE5&center=true&vCenter=true&width=760&height=45&lines=%F0%9F%94%92+Lock+Your+Private+Apps;%F0%9F%91%BB+Hide+Behind+Ghost+Mode;%F0%9F%93%B8+Catch+Intruders+Instantly;%F0%9F%8E%AD+Disguise+Your+App;%E2%9A%A1+Lightweight+and+Fast" alt="Typing animation"/>
 
 <br>
 
